@@ -227,7 +227,6 @@ for train_index, test_index in cv.split(range(n_subjects)):
             permuted_con_scores.append(permuted_con_score)
             # permuted_vox_scores.append(permuted_vox_score)
 
-stop
 mean_scores = np.array(scores).mean(0)
 masker.inverse_transform(mean_scores).to_filename(
     os.path.join(write_dir, 'scores.nii.gz'))
